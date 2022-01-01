@@ -1,0 +1,118 @@
+@import "_mixin.scss";
+
+.header {
+  background: linear-gradient(
+      to right bottom,
+      rgba($light-green, 0.8),
+      rgba($dark-green, 0.8)
+    ),
+    url("../img/hero.jpg") no-repeat top / cover;
+
+  height: 95vh;
+
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  position: relative;
+
+  &__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  &__logo {
+    height: 3.5rem;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    backface-visibility: hidden;
+  }
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    backface-visibility: hidden;
+    text-align: center;
+    width: 90vw;
+  }
+
+  .btn {
+    &:link,
+    &:visited {
+      font-size: $default-font-size;
+      text-transform: uppercase;
+      word-spacing: 0.1rem;
+      letter-spacing: 0.4rem;
+      padding: 1.5rem 4rem;
+      margin-top: 3rem;
+      border-radius: 1rem;
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 10rem;
+      position: relative;
+      transition: all 0.2;
+    }
+
+    &--animated {
+      animation: moveInBottom 0.5s ease-out 0.75s;
+      animation-fill-mode: backwards;
+    }
+    &--white {
+      color: $dark;
+      background-color: $white;
+    }
+    &:hover {
+      transform: translateY(-0.3rem);
+      /* box-shadow: x y blur color */
+      box-shadow: 0 10px 20px rgba($black, 0.2);
+
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba($black, 0.2),
+        0 -0.5rem 1rem rgba($black, 0.2);
+    }
+    &--white::after {
+      background-color: $white;
+    }
+
+    &::after {
+      @include ClearFix();
+    }
+  }
+}
+
+.section__about {
+  background-color: $dark-light-1;
+  margin-top: -20vh;
+  padding: 25rem 0;
+}
+
+.btn-txt {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $medium-green;
+    background-color: $dark-light-1;
+    display: inline-block;
+    padding: 3px;
+    text-decoration: none;
+
+    border-bottom: 1px solid $medium-green;
+    transition: all 0.2s;
+  }
+  &:hover {
+    background-color: $medium-green;
+    color: $white;
+    box-shadow: 0px 1rem 2rem (rgba($black, 0.2));
+    transform: translateY(-0.2rem);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}

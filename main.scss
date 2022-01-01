@@ -1,0 +1,40 @@
+@import "./sass/_variables.scss";
+@import "./sass/_base.scss";
+@import "./sass/_components.scss";
+@import "./sass/_layouts.scss";
+@import "./sass/_mixin.scss";
+@import "./sass/_home.scss";
+@import "./sass/_animation.scss";
+@import "./sass/_grid.scss";
+@import "./sass/_utilities.scss";
+@import "./sass/_typography.scss";
+@import "./sass/_composition.scss";
+@import "./sass/_features.scss";
+
+
+/* TODO:
+  animation
+
+  define animation name with @keyframe
+  @keyframe animationName{
+      0%{ 
+          do something
+      }
+      100%{ 100% means 100% of the animation
+          do something
+      } 
+  
+  
+  when we move any (px) div/item using absolute position then use
+  the translate(moved-px from top) to acutally place the
+  place the item on that much moved place e.g
+  div{
+      position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+  
+  */
+
+/*# sourceMappingURL=style.css.map */

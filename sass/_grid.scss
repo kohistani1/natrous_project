@@ -1,0 +1,36 @@
+.row {
+  max-width: $max-width;
+  margin: 0 auto;
+  // background-color: $dark;
+  color: $dark-light-1;
+
+  &:not(:last-child) {
+    margin-bottom: $guter-horizontal;
+  }
+  @include ClearFloat;
+
+  [class^="colo-"] {
+    // background-color: orangered;
+
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $guter-horizontal;
+    }
+  }
+
+  .colo-1-of-2 {
+    width: calc((100% - #{$guter-horizontal}) / 2);
+    color: $dark;
+    text-align: left;
+  }
+  // .colo-1-of-3 {
+  //   width: calc((100% - #{$guter-horizontal * 2}) / 3);
+  // }
+  // .colo-2-of-3 {
+  //   width: calc((100% - #{$guter-horizontal}) / 2);
+  // }
+  // .colo-1-of-4 {
+  //   width: calc((100% - #{$guter-horizontal * 3}) / 4);
+  // }
+}

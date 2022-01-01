@@ -1,0 +1,47 @@
+.heading-primary {
+  color: $white;
+  letter-spacing: 3.5rem;
+  font-size: 6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  &--main {
+    display: block;
+    animation: moveRight 1s ease;
+  }
+  &--sub {
+    display: block;
+    letter-spacing: 1.75rem;
+    /* margin-left: 16px; */
+    font-size: 2.6rem;
+    font-weight: 700;
+    /* animation: name animation time function delay */
+    animation: moveLeft 1s ease;
+  }
+}
+
+.heading__secondary {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  display: inline-block;
+  font-size: 3.5rem;
+  background: linear-gradient(to right, $light-green, $dark-green);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s ease;
+  &:hover {
+    transform: skewY(-2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 1rem rgba($black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  text-transform: uppercase;
+  font-size: $default-font-size;
+  font-weight: 700;
+}
+.para:not(:last-child) {
+  font-size: $default-font-size;
+  margin-bottom: 2rem;
+}
