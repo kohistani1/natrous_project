@@ -444,8 +444,8 @@ body {
 }
 
 .features-box {
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg") no-repeat top/cover;
-  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") no-repeat top/cover;
+  background-color: #55c57a;
+  color: #fff;
 }
 
 /* TODO:
