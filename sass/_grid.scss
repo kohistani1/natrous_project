@@ -24,13 +24,19 @@
     color: $dark;
     text-align: left;
   }
-  // .colo-1-of-3 {
-  //   width: calc((100% - #{$guter-horizontal * 2}) / 3);
-  // }
-  // .colo-2-of-3 {
-  //   width: calc((100% - #{$guter-horizontal}) / 2);
-  // }
-  // .colo-1-of-4 {
-  //   width: calc((100% - #{$guter-horizontal * 3}) / 4);
-  // }
+  .colo-1-of-3 {
+    width: calc((100% - #{$guter-horizontal * 2}) / 3);
+    color: $dark;
+    text-align: left;
+  }
+  .colo-2-of-3 {
+    width: calc((100% - #{$guter-horizontal}) / 2);
+    color: $dark;
+    text-align: left;
+  }
+  .colo-1-of-4 {
+    width: calc((100% - #{$guter-horizontal * 3}) / 4);
+    color: $dark;
+    text-align: left;
+  }
 }

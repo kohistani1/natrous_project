@@ -30,16 +30,19 @@
   0% {
     transform: rotate(0);
   }
-  50% {
-    transform: rotate(-90deg);
-  }
-  80% {
-    transform: rotate(100deg);
-  }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
+// 50% {
+//   transform: rotate(-90deg);
+// }
+// 80% {
+//   transform: rotate(100deg);
+// }
+// 100% {
+//   transform: rotate(0deg);
+// }
 
 @keyframes moveInBottom {
   0% {

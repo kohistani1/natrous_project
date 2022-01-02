@@ -1,12 +1,22 @@
 .features-box {
-  background-color: $medium-green;
-  color: $white;
-}
+  text-align: center;
+  padding: 2.5rem;
+  font-size: 1.5rem;
+  border: 1px solid $dark-light-1;
+  border-radius: 3px;
+  background-color: rgba($white, 0.8);
+  color: $dark;
+  transition: transform 0.2s;
 
-//   background: linear-gradient(
-//       to right bottom,
-//       rgba($light-green, 0.8),
-//       rgba($dark-green, 0.8)
-//     ),
-//     url("../img/hero.jpg") no-repeat top / cover;
-// }
+  &__icon {
+    display: inline-block;
+    font-size: 6rem;
+    margin: 0.5rem;
+    background: linear-gradient(to right bottom, $light-green, $medium-green);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.02);
+  }
+}
