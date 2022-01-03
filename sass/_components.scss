@@ -37,55 +37,7 @@
     width: 90vw;
   }
 
-  .btn {
-    &:link,
-    &:visited {
-      font-size: $default-font-size;
-      text-transform: uppercase;
-      word-spacing: 0.1rem;
-      letter-spacing: 0.4rem;
-      padding: 1.5rem 4rem;
-      margin-top: 3rem;
-      border-radius: 1rem;
-      display: inline-block;
-      text-decoration: none;
-      border-radius: 10rem;
-      position: relative;
-      transition: all 0.2;
-    }
-
-    &--animated {
-      // TODO:animation: animationName time func delay
-      animation: moveInBottom 0.5s ease-out 0.75s;
-      animation-fill-mode: backwards;
-    }
-    &--white {
-      color: $dark;
-      background-color: $white;
-    }
-    &:hover {
-      transform: translateY(-0.3rem);
-      /* TODO: box-shadow: x y blur color */
-      box-shadow: 0 10px 20px rgba($black, 0.2);
-
-      &::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
-      }
-    }
-    &:active {
-      transform: translateY(-1px);
-      box-shadow: 0 0.5rem 1rem rgba($black, 0.2),
-        0 -0.5rem 1rem rgba($black, 0.2);
-    }
-    &--white::after {
-      background-color: $white;
-    }
-
-    &::after {
-      @include ClearFix();
-    }
-  }
+ 
 }
 
 .section__about {
@@ -112,31 +64,8 @@
   }
 }
 .section-tours {
-  padding: 30rem 0 30rem 0;
+  padding: 25rem 0 10rem 0;
   margin-top: -20rem;
   background-color: $dark-light-1;
 }
 
-.btn-txt {
-  &:link,
-  &:visited {
-    font-size: $default-font-size;
-    color: $medium-green;
-    background-color: $dark-light-1;
-    display: inline-block;
-    padding: 3px;
-    text-decoration: none;
-
-    border-bottom: 1px solid $medium-green;
-    transition: all 0.2s;
-  }
-  &:hover {
-    background-color: $medium-green;
-    color: $white;
-    box-shadow: 0px 1rem 2rem (rgba($black, 0.2));
-    transform: translateY(-0.2rem);
-  }
-  &:active {
-    transform: translateY(0);
-  }
-}

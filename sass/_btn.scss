@@ -1,0 +1,89 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2;
+    position: relative;
+    font-size: $default-font-size;
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    /* TODO: box-shadow: x y blur color */
+    box-shadow: 0 1rem 2rem rgba($black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($black, 0.2),
+   
+  }
+  
+   &--white {
+     background-color: $white;
+     color: $dark;
+     &::after {
+       background-color: $white;
+     }
+   }
+  
+   &--green {
+     background-color: $medium-green;
+     color: $white;
+     
+     transition: all .2s;
+     &::after {
+       background-color: $medium-green;
+     }
+   }
+   
+   &::after {
+     @include ClearFix();
+   }
+
+  &--animated {
+    // TODO:animation: animationName time func delay
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+
+
+}
+
+.btn-txt {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $medium-green;
+    background-color: $dark-light-1;
+    display: inline-block;
+    padding: 3px;
+    text-decoration: none;
+
+    border-bottom: 1px solid $medium-green;
+    transition: all 0.2s;
+  }
+  &:hover {
+    background-color: $medium-green;
+    color: $white;
+    box-shadow: 0px 1rem 2rem (rgba($black, 0.2));
+    transform: translateY(-0.2rem);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}
