@@ -65,11 +65,12 @@
 }
 
 .btn-txt {
+  &,
   &:link,
   &:visited {
     font-size: $default-font-size;
     color: $medium-green;
-    background-color: $dark-light-1;
+    // background-color: $dark-light-1;
     display: inline-block;
     padding: 3px;
     text-decoration: none;
