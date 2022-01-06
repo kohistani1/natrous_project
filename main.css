@@ -13,6 +13,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
+  color: #777;
   line-height: 1.7;
   padding: 3rem;
   -webkit-box-sizing: border-box;
@@ -139,6 +140,43 @@ body {
      object-fit: cover;
 }
 
+.form {
+  color: #777;
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.form__input {
+  padding: 1.5rem 2rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  width: 90%;
+  display: block;
+  border-bottom: 3px solid transparent;
+}
+
+.form__input:focus {
+  border-bottom: 3px solid #55c57a;
+  outline: none;
+}
+
+.form__input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #888;
+}
+
+.form__label {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
 .header {
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg") no-repeat top/cover;
   background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") no-repeat top/cover;
@@ -213,6 +251,24 @@ body {
 .section__stories {
   padding: 15rem 0;
   position: relative;
+}
+
+.section__book {
+  padding: 15rem 0;
+  background: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#55c57a));
+  background: linear-gradient(to bottom right, #7ed56f, #55c57a);
+}
+
+.book {
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("./img/nat-10.jpg");
+  background-size: 100%;
+  border-radius: 3px;
+  height: 50rem;
+}
+
+.book__form {
+  width: 50%;
+  padding: 6rem;
 }
 
 .story {

@@ -1,0 +1,39 @@
+.form{
+  color: $dark;
+  &__group:not(:last-child){ 
+    margin-bottom: 2rem;
+  }
+  &__input{
+    padding: 1.5rem 2rem; 
+   
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    width: 90%;
+    display: block;
+    border-bottom: 3px solid transparent;
+
+    &:focus{
+      border-bottom: 3px solid $medium-green;
+      outline: none;
+    
+    }
+    &:focus:invalid{
+        border-bottom:3px solid $color-secondary-dark;
+    }
+  
+    &::-webkit-input-placeholder{
+      color:#888;
+    }
+    
+
+  }
+  &__label{
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+ 
+  }
+
+ 
+}
