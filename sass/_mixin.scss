@@ -1,5 +1,5 @@
 @mixin ClearFix() {
-  content: "";
+  content: '';
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -12,16 +12,44 @@
 }
 @mixin ClearFloat {
   &::after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
 }
 
-@mixin colCommon {
-  background-color: orangered;
-  float: left;
-  &:not(:last-child) {
-    margin-right: $guter-horizontal;
+// @mixin colCommon {
+//   background-color: orangered;
+//   float: left;
+//   &:not(:last-child) {
+//     margin-right: $guter-horizontal;
+//   }
+// }
+
+@mixin respond($breakPoint) {
+  @if $breakPoint == desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+
+  @if $breakPoint == tab-hori {
+    @media (max-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+
+  @if $breakPoint == tab-port {
+    @media (max-width: 56.25em) {
+      //900
+      @content;
+    }
+  }
+  @if $breakPoint == phone {
+    @media (max-width: 37.5em) {
+      // 600px /16px
+      @content;
+    }
   }
 }

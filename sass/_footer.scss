@@ -1,14 +1,20 @@
 .footer {
-  height: 98vh;
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem;
-
+  @include respond(tab-port) {
+    padding: 8rem 0;
+    text-align: center;
+  }
   &-img {
     text-align: center;
     img {
       width: 15rem;
       height: auto;
+
+      @include respond(tab-port) {
+        margin: 4rem 0;
+      }
     }
   }
 
@@ -16,6 +22,11 @@
     float: left;
     border-top: 1px solid $dark;
     padding-top: 2rem;
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
+
     ul {
       width: 100%;
       list-style-type: none;
@@ -45,6 +56,11 @@
     padding-top: 2rem;
     width: 75%;
     float: right;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
     p {
       color: $dark-light-1;
     }

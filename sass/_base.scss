@@ -6,14 +6,32 @@
 
 html {
   font-size: 62.5%;
+
+  @include respond(tab-hori) {
+    // 1rem = 9px
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    // 8px
+    font-size: 50%;
+  }
+
+  @include respond(desktop) {
+    //12px
+    font-size: 80%;
+  }
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-family: 'Lato', sans-serif;
   color: $dark;
   line-height: 1.7;
   padding: 3rem;
   box-sizing: border-box;
+
+  @include respond(tab-port) {
+    //<900
+    padding: 0;
+  }
 }

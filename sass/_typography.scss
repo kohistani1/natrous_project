@@ -1,13 +1,19 @@
 .heading-primary {
   color: $white;
-  letter-spacing: 3.5rem;
-  font-size: 6rem;
-  font-weight: 400;
   text-transform: uppercase;
+  backface-visibility: hidden;
 
   &--main {
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    font-size: 6rem;
     display: block;
     animation: moveRight 1s ease;
+
+    @include respond(tab-port) {
+      letter-spacing: 2rem;
+      font-size: 6rem;
+    }
   }
   &--sub {
     display: block;
@@ -17,6 +23,10 @@
     font-weight: 700;
     /* animation: name animation time function delay */
     animation: moveLeft 1s ease;
+
+    @include respond(tab-port) {
+      letter-spacing: 1rem;
+    }
   }
 }
 
@@ -30,6 +40,14 @@
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.2s ease;
+  @include respond(tab-port) {
+    font-size: 3rem;
+    margin-bottom: 4rem !important;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
   &:hover {
     transform: skewY(-2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 1rem rgba($black, 0.2);
